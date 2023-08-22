@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="scripts.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>UT1</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header" class="row">
+            <div id="nav-btn" class="gap-2  col-1 col-sm-1">
+                <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                    aria-controls="offcanvasScrolling"><img src=" ./images/nav-bar.png" alt="">
+                </button>
+            </div>
+            <div id="logo-container" class="col-1 col-sm-1">
+                <img id="logo" src="https://1000logos.net/wp-content/uploads/2021/05/Trello-logo.png" alt=""
+                    class="d-inline-block align-text-top">
+            </div>
+            <div id="nav-bar" class="col-8 col-sm-10 ">
+                <div class="row">
+                    <div class="col-6">
+                        <a style="width: 100%;" class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Espacios de trabajo
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <a style="width: 100%;" class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Plantillas
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main" class="row">
+            <div class="col-sm-4 ">
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="card-title">Lista de tareas</h6>
+                        <div id="answer-div"></div>
+                        <a type="button" id="addCard-tasks" class="btn btn-primary add-card-btn"
+                            data-bs-toggle="collapse" href="#collapse-tasks" role="button" aria-expanded="false"
+                            aria-controls="collapse-tasks" onclick="this.style.display='none'">Añadir tarjeta</a>
+                        <div class="collapse" id="collapse-tasks">
+                            <div class="row input-div">
+                                <div class="col-12">
+                                    <input id="input-tasks" type="text" name="lname" class="input-card">
+                                </div>
+                                <div class="col-sm-6">
+                                    <a id="task-add" class="btn btn-primary añadir-js"
+                                        onclick="add_item('addCard-tasks','input-tasks');">Añadir</a>
+                                </div>
+                                <div class="col-sm-2 close-add-btn">
+                                    <button id="close-card-btn" aria-label='delete item' type='button'
+                                        data-bs-toggle="collapse" href="#collapse-tasks" role="button"
+                                        aria-expanded="false" aria-controls="collapse-tasks"
+                                        onclick="normal_card(this);">X</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="card-title">En proceso</h6>
+                        <a type="button" id="addCard-process" class="btn btn-primary add-card-btn"
+                            data-bs-toggle="collapse" href="#collapse-process" role="button" aria-expanded="false"
+                            aria-controls="collapse-process" onclick="this.style.display='none'">Añadir tarjeta</a>
+                        <div class="collapse" id="collapse-process">
+                            <div class="row input-div">
+                                <div class="col-12">
+                                    <input id="input-process" type="text" name="lname" class="input-card">
+                                </div>
+                                <div class="col-sm-6">
+                                    <a id="process-add" class="btn btn-primary añadir-js"
+                                        onclick="add_item('addCard-process', 'input-process');">Añadir</a>
+                                </div>
+                                <div class="col-sm-2 close-add-btn">
+                                    <button id="close-card-btn" aria-label='delete item' type='button'
+                                        data-bs-toggle="collapse" href="#collapse-process" role="button"
+                                        aria-expanded="false" aria-controls="collapse-process"
+                                        onclick="normal_card(this);">X</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="card-title">Hecho</h6>
+                        <a type="button" id="addCard-done" class="btn btn-primary add-card-btn"
+                            data-bs-toggle="collapse" href="#collapse-done" role="button" aria-expanded="false"
+                            aria-controls="collapse-done" onclick="this.style.display='none'">Añadir tarjeta</a>
+                        <div class="collapse" id="collapse-done">
+                            <div class="row  input-div">
+                                <div class="col-12">
+                                    <input id="input-done" type="text" name="lname" class="input-card">
+                                </div>
+                                <div class="col-sm-6">
+                                    <a id="done-add" class="btn btn-primary añadir-js"
+                                        onclick="add_item('addCard-done', 'input-done');">Añadir</a>
+                                </div>
+                                <div class="col-sm-2 close-add-btn">
+                                    <button id="close-card-btn" aria-label='delete item' type='button'
+                                        data-bs-toggle="collapse" href="#collapse-done" role="button"
+                                        aria-expanded="false" aria-controls="collapse-done"
+                                        onclick="normal_card(this);">X</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="newList-div" class="col-sm-4">
+                <a type="button" id="new-list" class="btn btn-primary create-list" data-bs-toggle="collapse"
+                    href="#collapse-newList" role="button" aria-expanded="false" aria-controls="collapse-newList"
+                    onclick="this.style.display='none'">Añada otra lista</a>
+                <div class="card collapse" id="collapse-newList">
+                    <div class="card-body">
+                        <div class="row input-div">
+                            <div class="col-12">
+                                <input id="input-newList" type="text"  name="lname" class="input-card" required minlength="4" maxlength="8">
+                            </div>
+                            <div class="col-sm-8">
+                                <a id="list-add" class="btn btn-primary añadir-js"
+                                    onclick="newCard('newList-div');">Añadir Lista</a>
+                            </div>
+                            <div class="col-sm-3 close-add-btn">
+                                <button id="close-card-btn" aria-label='delete item' type='button' data-bs-toggle="collapse"
+                                    href="#collapse-newList" role="button" aria-expanded="false" aria-controls="collapse-newList"
+                                    onclick="normal_card(this);">X</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col"></div>
+            <div class="col-sm-12">
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                    id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Demas cosas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <a href="#">Crear nueva tarjeta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

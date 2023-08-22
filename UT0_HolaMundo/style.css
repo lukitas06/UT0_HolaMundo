@@ -1,0 +1,232 @@
+@charset "utf8";
+
+#cabecera{
+    position: fixed;
+    vertical-align:top;
+    height: 5vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    box-sizing:border-box;
+    background-color: #f1f1f1;
+    display: flex;
+    
+}
+#pag_title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    text-align: center;
+}
+.main_nav{
+    margin-right: auto;
+    width: max-content;
+    flex-direction: row;
+    display: block;
+    box-sizing: border-box;
+    align-items: center;
+    height: 60%;
+}
+.main_nav .main-menu{
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto 0 0;
+}    
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    gap: 1rem;
+}
+.main-menu li{
+    list-style: none;
+    box-sizing: border-box;
+    display: list-item;
+    position: relative;
+    height: 100%;
+}
+.main-menu button{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    appearance: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+#boton_aboutus:hover+div{
+    display: block;
+}
+.main-menu button:hover{
+    background-color: azure;
+}
+.desplegable_menu{
+    position: absolute;
+    box-sizing: border-box;
+    text-align: left;
+    background-color: #f1f1f1;
+    border:1px solid black;
+    border-radius: 1vw;
+    height: 30vw;
+    width: 30vw;
+    align-items: center;
+    max-width:initial;
+    display: none;
+}
+.desplegable_menu p{
+    padding: 2vw 2vw 2vw;
+    line-height: 2.5vw;
+    text-align: left;
+    height: 80%;
+    box-sizing: border-box;
+}
+.foto_logo
+{
+    vertical-align:top;
+    height: 5px;
+    width: 10px;
+    margin: 0;
+    /*right: 0;*/
+    box-sizing:border-box;
+    text-align: center;
+    background-color: #f1f1f1;
+    display: flex;
+}
+.imagen_ucu{
+    margin-top: 2px;
+    width: 95%;
+    margin: auto;
+}
+.articulo{
+    margin-top: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: 20%;   
+    box-sizing:border-box;
+    display: inline-block;
+    border: 1px solid burlywood;
+    background-color:antiquewhite;
+    align-items: center;
+}
+.img_articulo{
+    float: left;
+    width: 20%;
+    margin-left: 2%;
+    margin-top: 5%;
+    vertical-align: middle;
+}
+.img_articulo img{
+ width: 90%;
+ margin:5px 5px;
+ border: 1px solid burlywood;   
+}
+
+
+body{
+    background-color:white;
+    margin: 0px;
+}
+
+footer{
+    margin-top: 2vw;
+    background-color: midnightblue;
+    height: 10vw;
+    width: 100%;
+    display: inline-block;
+}
+#myNavBar{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: inherit;
+    gap: 0.5rem;
+    position: static;
+    padding: 0;
+    width: 100%;
+}
+
+#myNavBar a {
+    width: 10%;
+  }
+
+.nav_bar a:hover {
+    color: #000000;
+    background-color: antiquewhite;
+  }
+
+div p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-top: 2vw;
+    text-align: center;
+}
+
+
+#main{
+    margin-top: 7vw;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+
+}
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+  }
+
+div+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 3px 0px;
+    text-align: center;
+    border-bottom: 1px solid burlywood;
+    font-size: 100%;
+}
+.articulo p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-top: 3px;
+}
+
+@media (width < 768px){
+.cabecera{
+    height: 30px;
+}
+.titulo_principal{
+    /*font-size: 2vw;*/
+    display: inline-block;
+    margin-left: 50px;
+    text-align: center;
+    color:#070237;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+div+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 3px 0px;
+    text-align: center;
+    border-bottom: 1px solid burlywood;
+    font-size: 15px;
+}
+.articulo p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100%;
+    margin-top: 1px;
+    height: 80%;
+}
+.nav_bar a{
+    font-size: 70%;
+    padding: 1% 1% 1% 13%;
+}
+
+}
