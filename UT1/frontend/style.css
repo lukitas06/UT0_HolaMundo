@@ -1,0 +1,244 @@
+
+body{
+    text-align: center;
+    margin: 0px;
+}
+#container #header{
+    display:flex;
+   border-bottom: 1px solid beige;
+   width: 100%;
+height: 7vw;
+background-color: white;
+box-sizing: border-box;
+
+vertical-align:top;
+}
+#container{
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: rgb(32, 32, 98);
+}
+#container>div{
+    align-items: center;
+    box-sizing: border-box;
+    width:100%;
+    margin: auto;
+}
+#logo-container{
+    display: inline-block;
+    padding: 1%;
+    box-sizing: border-box;
+}
+#logo{
+    width: 100%;
+    display: inline-block;
+    object-fit: cover; /* Recorta la imagen sin deformarla */
+    object-position: center;
+}
+#nav-bar{
+    display: inline-block;
+    box-sizing: border-box;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+#nav-btn{
+    display: inline-block;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    height:fit-content;
+    padding: 1% 1%;
+
+}
+#nav-btn button{
+    display: flex;
+    width: 2vw;
+    padding: 1%;
+    margin:auto;
+    text-align: center;
+    align-items: center;
+    object-position: center;
+    aspect-ratio:1/1;
+    border: none;
+    border-radius: 0.3vw;
+}
+#nav-btn img{
+    width: 100%;
+    object-fit: cover; /* Recorta la imagen sin deformarla */
+    object-position: center;
+    aspect-ratio:1/1;
+}
+.offcanvas.offcanvas-start{
+    width: 35vw;
+}
+#container #main{
+    display: flex;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    padding-top: 2vw;
+    background-color: rgb(32, 32, 98);
+    width: 100%;
+    height: calc(100%);
+    margin-top: 7vw;
+    
+}
+.card-title{
+    text-align: start;
+    font-family: system-ui;
+    width:fit-content;
+    position: absolute;
+    left: 1vw;
+    display: inline-block;
+    outline: none;
+}
+.options-btn{
+    width: 2.5vw;
+    height: 2.5vw;
+    right: 1vw;
+    position:absolute;
+    display: flex;
+    align-items: center;
+    margin-bottom: inherit;
+    border-radius: 0.5vw;
+}
+.options-btn:hover{
+    background-color: rgb(153, 160, 165);
+}
+.card-header{
+    position: relative;
+    display: flex;
+    padding: 0%;
+    height: 3vw;
+    background-color: inherit;
+    margin-bottom: 1vw;
+    align-items: center;
+}
+.card{
+    margin-bottom: 4vw;
+    background-color: rgb(225, 228, 230);
+}
+.card-body{
+    padding-bottom: 1vw;
+}
+
+.btn-primary{
+    color: black;
+    margin-bottom: 1vw;
+    width: 100%;
+    background-color: white;
+    border: none;
+}
+.add-card-btn{
+    background-color: rgb(225, 228, 230);
+    vertical-align:bottom;
+    margin-bottom: 1vw;
+    cursor: pointer;
+    position: static;
+    display: inline-block;
+}
+.add-card-btn:hover{
+    background-color: rgb(153, 160, 165);
+}
+.añadir-js{
+    width: 100%;
+    display: inline-block;
+    padding: 0%;
+}
+.input-div{
+    margin-bottom: 1vw;
+    align-items: center;
+}
+
+input{
+    border:none;
+    border-radius: 1vw;
+    height: 5vw;
+    text-align:start;
+    align-items: start;
+}
+.input-card{
+    margin-bottom: 1vw;
+    width: 100%;
+}
+#close-card-btn{
+    width: 100%;
+    height: 100;
+    border: none;
+    background-color: inherit;
+    display: flex;
+    padding: 0%;
+    font-weight: bold;
+}
+.close-add-btn{
+    padding-left: 0;
+    align-items: center;
+    display: flex;
+    margin-bottom: 1vw;
+}
+#new-list{
+    background-color: #ffffff3d;
+}
+.description-body{
+margin-left: 10vw;
+}
+.description-title{
+    display: flex;
+position: relative;
+gap: 5vw;
+align-items: center;
+}
+.modal-body{
+
+}
+.add-description-btn{
+    border: none;
+    width: 100%;
+    align-items: start;
+    display: flex;
+    height: 15vw;
+    padding: 2vw;
+    cursor: pointer;
+}
+.add-description-btn:hover{
+    background-color: #ffffff3f;
+}
+.input-description {
+    outline: blue;
+    border: 1px solid blue;
+    width: 100%;
+    border-radius: 0;
+    display: flex;
+    height: 15vw;
+}
+.save-btn{
+background-color: blue;
+display: flex;
+width: min-content;
+color: white;
+}
+.editDescription-btn{
+    display: flex;
+width: min-content;
+right: 0;
+position: absolute;
+background-color: #ffffff78;
+
+}
+.offcanvas-body{
+    text-align: center;
+    display: block;
+}
+.offcanvas-body a{
+    display: block;
+    margin-bottom: 1vw;
+    text-align: center;
+}
+a{
+    width: auto;
+}
+p{
+    width: 100%;
+}
+
