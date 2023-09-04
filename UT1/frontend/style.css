@@ -2,6 +2,7 @@
 body{
     text-align: center;
     margin: 0px;
+    background-color: rgb(32, 32, 98);
 }
 #container #header{
     display:flex;
@@ -152,11 +153,12 @@ vertical-align:top;
 }
 
 input{
-    border:none;
-    border-radius: 1vw;
-    height: 5vw;
+    border: solid 0.5px rgb(135, 235, 246);
+    border-radius: 0.5vw;
+    height: 100%;
     text-align:start;
     align-items: start;
+    background-color: aliceblue;
 }
 .input-card{
     margin-bottom: 1vw;
@@ -234,6 +236,32 @@ background-color: #ffffff78;
     display: block;
     margin-bottom: 1vw;
     text-align: center;
+}
+.form-div{
+    text-align: center;
+    background-color: white;
+    width: fit-content;
+    padding: 1vw;
+    align-items: center;
+    display: block;
+}
+form{
+    margin-bottom: 1vw;
+}
+#getUser{
+    width: 100%;
+    display: block;
+    gap: 1vw;
+    align-items: center;
+}
+#getText{
+    display: block;
+    margin: 0%;
+    text-align: start;
+}
+#forms-container{
+    text-align: center;
+    gap: 1vw;
 }
 a{
     width: auto;

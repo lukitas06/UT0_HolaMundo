@@ -1,3 +1,44 @@
+const formGet= document.getElementById("getUser");
+const formPost = document.getElementById("postUser");
+
+formGet.addEventListener('submit',async (e)=>{
+    e.preventDefault();
+    const id = e.target.id.value;
+    let message="";    
+    await fetch(`http://127.0.0.1:3000/user/${id}`).then((response)=> response.json()).then((data)=>{
+        const p = document.createElement("p");
+        if(data.message){
+            message= "User not found";
+        }
+        else{
+            message = `ID: ${data.id} | Name: ${data.first_name} | LastName: ${data.last_name} | Age: ${data.age}`;
+        }
+        document.getElementById("getText").innerHTML= message;
+    });
+});
+
+formPost.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    const firstName = e.target.firstName.value;
+    const lastName = e.target.lastName.value;
+    const age = e.target.age.value;
+    let message= '';
+    await fetch(`http://127.0.0.1:3000/user/`,{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({first_name:firstName, last_name: lastName, age: age}),
+    }).then((response)=>response.json()).then((data)=>{
+        message= data.message;
+    });
+    document.getElementById("postText").innerHTML= message;
+});
+
+
+
+
+
 function add_item(elem){
     const input= elem.parentElement.previousElementSibling.firstElementChild;
     const button= document.createElement("a");
